@@ -1,0 +1,92 @@
+<div class="col m-5">
+    <div class="">
+        <label for="s">Service ID</label>
+        <input class="iser "[value]="SID">
+        <button class="button"(click)="showDialog()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div>
+        <label>Category</label>
+        <select class="iCate mt-2" id="category" [value]="Category">
+             <option *ngFor="let s of Service" value="{{s.Category}}">{{s.Category}}</option>
+        </select><br>
+        <label for="s">Name</label>
+        <input class="in mt-2" [value]="SName"><br>
+        <label for="s">Sale Rate</label>
+        <input class="is mt-2"><br>
+        <label for="s">IPD Rate</label>
+        <input class=" ii mt-2"><br>
+        <label for="s">Buy Rate</label>
+        <input class="ib mt-2" [value]="BuyRate"><br>
+        <label for="s">Re Order Level</label>
+        <input class="ir mt-2"><br>
+        <label>Type</label>
+        <input list="type" class="it mt-2">
+        <datalist id="type">
+             <option value="t1">Type1</option>
+             <option value="t2">Type2</option>
+             <option value="t3">type3</option>
+        </datalist><br>
+        <label>Generic</label>
+        <input class="ig mt-2" list="catagory">
+        <datalist id="catagory">
+             <option value="c1">Catagory1</option>
+             <option value="c2">Catagory2</option>
+             <option value="c3">Catagory3</option>
+        </datalist><br>
+        <label>Supplaier</label>
+        <input list="supplaier" class="is mt-2">
+        <datalist id="supplaier">
+             <option value="s1">Supplaier1</option>
+             <option value="s2">Supplaier2</option>
+             <option value="s3">Supplaier3</option>
+        </datalist><br>
+        <label>Investigation Module</label>
+        <select class="iin mt-2" id="category">
+             <option value="#">#</option>
+             <option value="#">##</option>
+             <option value="#">###</option>
+        </select><br>
+        <label for="s">Master Catagory</label>
+        <input list="mCatagory" class="ima mt-2" [value]="MasterCategory"><br>
+        <datalist id="mCatagory">
+          <option *ngFor="let s of Service" value="{{s.Master_Category}}">{{s.Master_Category}}</option>
+        </datalist><br>
+        <input class="mt-1" style="margin-left: 180px;" type="radio" id="active" name="fav_language" value="Active">
+        <label for="active">Active</label>
+        <input style="margin-left: 10px;" type="radio" id="inactive" name="fav_language" value="inactive">
+        <label for="inactive">InActive</label>
+    </div>
+</div>
+<p-dialog header="Service Table" [(visible)]="visible" [style]="{width: '50vw'}">
+  <div class="row">
+     <div class="col d-flex justify-content-end">
+          <label>Search</label>
+          <input class="ms-2 mb-2 me-5" style="width: 150px; border: 1px solid black; border-radius: 5px;" [(ngModel)]="SearchData" (change)="applyFilter(SearchData)">
+     </div>
+  </div>   
+  <table class="table">
+     <thead>
+          <tr>
+               <th>Service ID</th>
+               <th>Name</th>
+               <th>Buy Rate</th>
+               <th>Category</th>
+               <th>Master Category</th>
+          </tr>
+     </thead>
+     <tbody>
+          <tr *ngFor="let d of dataToShow; let index = index" (click)="onClick(index)" style="cursor: pointer;" >
+               <td>{{d.id}}</td>
+               <td>{{d.name}}</td>
+               <td>{{d.BuyRate}}</td>
+               <td>{{d.Category}}</td>
+               <td>{{d.Master_Category}}</td>
+          </tr>
+          <div>
+               <button (click)="prevPage()" [disabled]="currentPage === 1" style="border: none; background: none;"><i class="fa-solid fa-angles-left" style="color: #6d2eff;"></i></button>
+               <span>page {{currentPage}} of {{totalPages}}</span>
+               <button (click)="nextPage()" [disabled]="currentPage === totalPages" style="border: none; background: none;"><i class="fa-solid fa-angles-right" style="color: #6d2eff;"></i></button>
+          </div>
+     </tbody>
+  </table>
+</p-dialog>

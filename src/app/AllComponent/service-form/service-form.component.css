@@ -1,0 +1,105 @@
+.button{
+    border: 1px solid gainsboro; border-radius: 5px; padding: 3px;
+}
+
+
+.iser{
+    width: 100px; margin-left: 100px; border: 1px solid gainsboro; border-radius: 5px;padding: 3px;
+}
+.iCate{
+    width: 450px; margin-left: 105px; padding: 3px; border: 1px solid gainsboro; border-radius: 5px
+}
+.in{
+    width: 450px; margin-left: 126px;border: 1px solid gainsboro; border-radius: 5px; padding: 3px;
+}
+.is{
+    width: 100px;
+    margin-left: 104px;
+    border: 1px solid gainsboro;
+    border-radius: 5px; 
+    padding: 3px;
+}
+.ii{
+    width: 100px;
+    margin-left: 108px; 
+    border: 1px solid gainsboro; 
+    border-radius: 5px;
+    padding: 3px;
+}
+.ib{
+    width: 100px; margin-left: 107px;border: 1px solid gainsboro; border-radius: 5px; padding: 3px;
+}
+.ir{
+    width: 250px; margin-left: 67px;border: 1px solid gainsboro; border-radius: 5px;padding: 3px;
+}
+.it{
+    width: 250px; margin-left: 134px; padding: 3px;border: 1px solid gainsboro; border-radius: 5px
+}
+
+.ig{
+    width: 450px; margin-left: 112px;  padding: 3px;border: 1px solid gainsboro; border-radius: 5px
+}
+
+.is{
+    width: 450px; margin-left: 100px;  padding: 3px; border: 1px solid gainsboro; border-radius: 5px
+}
+.iin{
+    width: 450px; margin-left: 20px; padding: 3px; border: 1px solid gainsboro; border-radius: 5px
+}
+.ima{
+    width: 450px; margin-left: 47px; border: 1px solid gainsboro; border-radius: 5px;padding: 3px;
+}
+
+
+
+
+
+/* Responcive start */
+
+@media only screen and (max-width: 886px) {
+    .iCate{
+        width: 345px;
+        margin-left: 105px;
+        padding: 3px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+    }
+
+    .in{
+        width: 346px;
+        margin-left: 126px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .is{
+        width: 347px;
+        margin-left: 100px;
+        padding: 3px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+    }
+    .ig{
+        width: 343px;
+        margin-left: 112px;
+        padding: 3px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+    }
+    .iin{
+        width: 347px;
+        margin-left: 20px;
+        padding: 3px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+    }
+    .ima{
+        width: 348px;
+        margin-left: 47px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        padding: 3px;
+    }
+  }
+
+/* <---------------------//------------> */
